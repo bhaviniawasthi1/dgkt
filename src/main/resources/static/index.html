@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DGKT Assessment</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2330; --mute:#5d6678; --line:#dfe3ea; --accent:#2457d6; --ok:#1f8a4c; --weak:#c23b3b; --warn:#b7791f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14171d; --card:#1d222b; --ink:#e8ebf1; --mute:#9aa3b5; --line:#2e3542; --accent:#6c93ff; --ok:#4cc382; --weak:#ff7b7b; --warn:#e3b04b; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, Segoe UI, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:1.5rem; margin:0 0 4px; } h2 { font-size:1.15rem; margin:0 0 12px; }
+  .sub { color:var(--mute); margin:0 0 20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; margin-bottom:16px; }
+  .topics { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:8px; }
+  .topic { display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; }
+  .topic select { margin-left:auto; }
+  button { font:inherit; border:0; border-radius:8px; padding:10px 18px; background:var(--accent); color:#fff; cursor:pointer; }
+  button:disabled { opacity:.5; cursor:default; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); color:var(--ink); border:1px solid var(--line); margin:8px 0; }
+  .opt.sel { border-color:var(--accent); outline:2px solid var(--accent); }
+  .tag { font-size:.8rem; color:var(--mute); }
+  .bar { height:10px; background:var(--line); border-radius:5px; overflow:hidden; }
+  .bar > i { display:block; height:100%; }
+  .row { display:grid; grid-template-columns:170px 1fr 120px; gap:12px; align-items:center; margin:8px 0; font-size:.95rem; }
+  .diag { border-left:4px solid var(--weak); padding:8px 12px; margin:10px 0; background:var(--bg); border-radius:4px; }
+  .OK { color:var(--ok); } .WEAK { color:var(--weak); } .UNVERIFIED { color:var(--warn); }
+  .hide { display:none; }
+  @media (max-width:520px) { .row { grid-template-columns:1fr; gap:4px; } }
+
+  .nav { display:flex; gap:16px; margin:0 0 16px; font-size:.95rem; }
+  .nav a { color:var(--accent); text-decoration:none; } .nav a.cur { font-weight:600; text-decoration:underline; }
+  input[type=text] { font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); }
+  select.big { font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); }
+  .opt.right { border-color:var(--ok); outline:2px solid var(--ok); }
+  .opt.wrong { border-color:var(--weak); outline:2px solid var(--weak); }
+  .fb { margin:12px 0; padding:10px 12px; border-radius:6px; background:var(--bg); }
+  .fb.good { border-left:4px solid var(--ok); } .fb.bad { border-left:4px solid var(--weak); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; }
+  .stat { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+  .stat b { display:block; font-size:1.4rem; }
+  .sess { border-top:1px solid var(--line); padding:10px 0; }
+  .plink { display:inline-block; margin:4px 8px 0 0; font-size:.9rem; color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <nav class="nav"><a class="cur" href="/">Assessment</a><a href="/practice.html">Practice</a><a href="/dashboard.html">Dashboard</a></nav>
+  <h1>DGKT Assessment</h1>
+  <p class="sub">Take a short test. At the end you see which topic is really weak, and why.</p>
+
+  <section id="start" class="card">
+    <p>Nickname (optional): <input type="text" id="nick" maxlength="40" placeholder="e.g. Riya"></p>
+    <h2>1. Choose the topics you want to be tested on</h2>
+    <p class="sub">Optional: rate yourself from 1 to 10 for a topic. This only sets a starting guess, it does not count as an answer.</p>
+    <div id="topics" class="topics"></div>
+    <p><button id="go">Start test</button> <span id="err" class="tag"></span></p>
+  </section>
+
+  <section id="quiz" class="card hide">
+    <div class="tag" id="phase"></div>
+    <h2 id="qtext"></h2>
+    <div id="opts"></div>
+    <p><button id="submit" disabled>Submit answer</button></p>
+  </section>
+
+  <section id="result" class="hide">
+    <div class="card"><h2>Diagnosis</h2><div id="diag"></div><p class="tag" id="stats"></p></div>
+    <div class="card"><h2>Topic mastery</h2><div id="mastery"></div>
+      <p class="tag">Bar = the model's estimated chance that you know the topic. OK means at least 0.50 after enough answers.</p></div>
+    <button onclick="location.reload()">Take again</button> <a class="plink" href="/dashboard.html">Open my dashboard</a>
+  </section>
+</main>
+<script src="/common.js"></script>
+<script>
+let sid = null, qid = null, choice = null;
+const $ = id => document.getElementById(id);
+
+async function api(path, method = 'GET', body) {
+  const r = await fetch('/api' + path, { method, headers: { 'Content-Type': 'application/json' }, body: body ? JSON.stringify(body) : undefined });
+  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).message || r.statusText);
+  return r.json();
+}
+
+async function init() {
+  $('nick').value = dgktNickname();
+  const g = await api('/graph');
+  $('topics').innerHTML = g.map(t => `
+    <label class="topic"><input type="checkbox" value="${t.id}"> ${t.name}
+      <select data-rate="${t.id}"><option value="">rate</option>${[1,2,3,4,5,6,7,8,9,10].map(n => `<option>${n}</option>`).join('')}</select>
+    </label>`).join('');
+}
+
+$('go').onclick = async () => {
+  const topics = [...document.querySelectorAll('#topics input:checked')].map(x => x.value);
+  const ratings = {};
+  document.querySelectorAll('[data-rate]').forEach(s => { if (s.value && topics.includes(s.dataset.rate)) ratings[s.dataset.rate] = +s.value; });
+  try {
+    dgktSetNickname($('nick').value);
+    sid = (await api('/sessions', 'POST', { topics, ratings, studentCode: dgktStudentCode(), nickname: $('nick').value })).sessionId;
+    $('start').classList.add('hide'); $('quiz').classList.remove('hide');
+    await nextQuestion();
+  } catch (e) { $('err').textContent = e.message; }
+};
+
+async function nextQuestion() {
+  const q = await api(`/sessions/${sid}/next`);
+  if (q.done) return showResult();
+  qid = q.questionId; choice = null; $('submit').disabled = true;
+  $('phase').textContent = q.phase === 'EXAM' ? 'Exam' : 'Follow-up questions';
+  $('qtext').textContent = q.text;
+  $('opts').innerHTML = '';
+  q.options.forEach((o, i) => {
+    const b = document.createElement('button'); b.className = 'opt'; b.textContent = o;
+    b.onclick = () => { choice = i; document.querySelectorAll('.opt').forEach(x => x.classList.remove('sel')); b.classList.add('sel'); $('submit').disabled = false; };
+    $('opts').appendChild(b);
+  });
+}
+
+$('submit').onclick = async () => {
+  $('submit').disabled = true;
+  await api(`/sessions/${sid}/answer`, 'POST', { questionId: qid, choice });
+  await nextQuestion();
+};
+
+async function showResult() {
+  const r = await api(`/sessions/${sid}/result`);
+  $('quiz').classList.add('hide'); $('result').classList.remove('hide');
+  $('diag').innerHTML = r.diagnosis.length
+    ? r.diagnosis.map(d => `<div class="diag">${d.message}<br>${d.rootIds.map((id, i) => `<a class="plink" href="/practice.html?topic=${id}">Practice ${d.roots[i]}</a>`).join('')}</div>`).join('')
+    : `<p>${r.summary}</p>`;
+  $('stats').textContent = `Exam questions: ${r.examQuestions}. Follow-up questions: ${r.followUpQuestions} in ${r.rounds} round(s).`;
+  $('mastery').innerHTML = r.topics.map(t => `
+    <div class="row"><span>${t.name}</span>
+      <div class="bar"><i style="width:${Math.round(t.p * 100)}%; background:var(--${t.status === 'OK' ? 'ok' : t.status === 'WEAK' ? 'weak' : 'warn'})"></i></div>
+      <span class="${t.status}">${t.p.toFixed(2)} · ${t.status.toLowerCase()} (${t.n})</span></div>`).join('');
+}
+init();
+</script>
+</body>
+</html>

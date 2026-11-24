@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DGKT Dashboard</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <nav class="nav"><a href="/">Assessment</a><a href="/practice.html">Practice</a><a class="cur" href="/dashboard.html">Dashboard</a></nav>
+  <h1>My dashboard</h1>
+  <p class="sub" id="who"></p>
+
+  <div class="card"><h2>Overview</h2><div class="stats" id="totals"></div></div>
+  <div class="card"><h2>Topic mastery (latest assessment)</h2><div id="mastery"></div>
+    <p class="tag">Bar = estimated chance that you know the topic. OK means at least 0.50 after enough answers.</p></div>
+  <div class="card"><h2>Weak topics found</h2><div id="weak"></div></div>
+  <div class="card"><h2>My sessions</h2><div id="sessions"></div></div>
+  <div class="card"><h2>Whole platform</h2><div class="stats" id="plat"></div><div id="roots" class="tag"></div></div>
+  <div class="card">
+    <h2>Clear all data</h2>
+    <p class="tag">For the site owner. Deletes every student, answer and result on this site, so the next tester starts fresh. This cannot be undone.</p>
+    <button id="reset" class="danger">Clear all data</button>
+    <p id="resetMsg" class="tag"></p>
+  </div>
+</main>
+<script src="/common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+async function api(path) {
+  const r = await fetch('/api' + path);
+  if (!r.ok) throw new Error(r.statusText);
+  return r.json();
+}
+const stat = (n, label) => `<div class="stat"><b>${n}</b>${label}</div>`;
+
+async function load() {
+  const code = new URLSearchParams(location.search).get('code') || dgktStudentCode();
+  const d = await api('/students/' + encodeURIComponent(code) + '/dashboard');
+  $('who').textContent = (d.nickname ? d.nickname + ' · ' : '') + 'student code: ' + d.code;
+  $('totals').innerHTML = stat(d.totals.sessions, 'sessions') + stat(d.totals.answers, 'test answers') + stat(Math.round(d.totals.accuracy * 100) + '%', 'test answers correct') + stat(d.totals.practiceAnswers, 'practice answers');
+
+  $('mastery').innerHTML = d.mastery.length ? d.mastery.map(t => `
+    <div class="row"><span>${t.name}</span>
+      <div class="bar"><i style="width:${Math.round(t.p * 100)}%; background:var(--${t.status === 'OK' ? 'ok' : t.status === 'WEAK' ? 'weak' : 'warn'})"></i></div>
+      <span class="${t.status}">${t.p.toFixed(2)} · ${t.status.toLowerCase()} (${t.n})</span></div>`).join('')
+    : '<p class="tag">No assessment yet. <a class="plink" href="/">Take one</a>.</p>';
+
+  // Root causes from the latest finished assessment come first. Other weak topics are shown small.
+  const lastTest = d.sessions.find(s => s.mode === 'ASSESSMENT' && s.finished && s.diagnosis);
+  const rootIds = new Set();
+  (lastTest ? lastTest.diagnosis : []).forEach(x => (x.rootIds || []).forEach(r => rootIds.add(r)));
+  const byId = Object.fromEntries(d.mastery.map(t => [t.id, t]));
+  const weak = d.mastery.filter(t => t.status === 'WEAK');
+  const others = weak.filter(t => !rootIds.has(t.id));
+  let html = '';
+  if (rootIds.size) {
+    html += '<p class="tag">Revise these first (root causes from your last test):</p>' +
+      [...rootIds].map(id => `<div class="diag">${(byId[id] || {}).name || id} <a class="plink" href="/practice.html?topic=${id}">Practice this</a></div>`).join('');
+  }
+  if (others.length) {
+    html += `<p class="tag">${rootIds.size ? 'Other weak topics:' : 'Weak topics:'}</p>` +
+      others.map(t => `<a class="chip" href="/practice.html?topic=${t.id}">${t.name}</a>`).join('');
+  }
+  $('weak').innerHTML = html || '<p class="tag">Nothing marked weak yet.</p>';
+
+  $('sessions').innerHTML = d.sessions.length ? d.sessions.map(s => `
+    <div class="sess"><b>${s.mode === 'PRACTICE' ? 'Practice' : 'Assessment'}</b>
+      <span class="tag"> · ${new Date(s.startedAt).toLocaleString()} · ${s.answered} answers${s.mode === 'ASSESSMENT' && !s.finished ? ' · not finished' : ''}</span>
+      <div class="tag">Topics: ${s.topics.join(', ')}</div>
+      ${(s.diagnosis || []).map(x => `<div class="diag">${x.message}</div>`).join('')}
+    </div>`).join('') : '<p class="tag">No sessions yet.</p>';
+
+  const p = await api('/stats');
+  $('plat').innerHTML = stat(p.students, 'students') + stat(p.sessions, 'sessions') + stat(p.answers, 'answers');
+  $('roots').textContent = p.topRootCauses.length
+    ? 'Most common root causes: ' + p.topRootCauses.map(r => r.topic + ' (' + r.count + ')').join(', ')
+    : '';
+}
+$('reset').onclick = async () => {
+  if (!confirm('Delete ALL students, answers and results on this site? This cannot be undone.')) return;
+  let pin = '';
+  try {
+    const info = await api('/admin/info');
+    if (info.pinRequired) { pin = prompt('Enter the reset PIN'); if (pin === null) return; }
+    const r = await fetch('/api/admin/reset', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pin }) });
+    if (r.status === 403) { $('resetMsg').textContent = 'Wrong PIN. Nothing was deleted.'; return; }
+    if (!r.ok) throw new Error(r.statusText);
+    dgktNewStudent();           // this browser also gets a fresh student code
+    $('resetMsg').textContent = 'All data cleared.';
+    await load();
+  } catch (e) { $('resetMsg').textContent = 'Could not clear: ' + e.message; }
+};
+load().catch(e => { $('who').textContent = 'Could not load: ' + e.message; });
+</script>
+</body>
+</html>
