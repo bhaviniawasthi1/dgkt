@@ -1,0 +1,20 @@
+{
+ "arrays": {"name": "Arrays", "prerequisites": [], "reason": "Base topic. Everything else stores data in arrays."},
+ "recursion": {"name": "Recursion", "prerequisites": ["arrays"], "reason": "Recursive problems on arrays/indices need array indexing first."},
+ "hashing": {"name": "Hashing", "prerequisites": ["arrays"], "reason": "A hash table is built on an array and an index function."},
+ "sorting": {"name": "Sorting", "prerequisites": ["arrays", "recursion"], "reason": "Merge sort and quick sort are recursive."},
+ "searching": {"name": "Binary Search", "prerequisites": ["arrays", "sorting"], "reason": "Binary search works only on sorted data."},
+ "linked_list": {"name": "Linked Lists", "prerequisites": ["arrays"], "reason": "Learned by comparing with arrays (node vs index)."},
+ "stacks": {"name": "Stacks", "prerequisites": ["arrays", "linked_list"], "reason": "Built using an array or a linked list."},
+ "queues": {"name": "Queues", "prerequisites": ["arrays", "linked_list"], "reason": "Built using an array or a linked list."},
+ "memoization": {"name": "Memoization", "prerequisites": ["recursion", "hashing"], "reason": "Stores recursive results in a hash map."},
+ "dp": {"name": "Dynamic Programming", "prerequisites": ["recursion", "memoization"], "reason": "DP is recursion plus saved sub-results."},
+ "backtracking": {"name": "Backtracking", "prerequisites": ["recursion"], "reason": "Tries choices recursively and undoes them."},
+ "greedy": {"name": "Greedy", "prerequisites": ["sorting"], "reason": "Most greedy problems start by sorting."},
+ "trees": {"name": "Binary Trees", "prerequisites": ["recursion", "linked_list"], "reason": "Nodes with links; traversals are recursive."},
+ "bst": {"name": "Binary Search Trees", "prerequisites": ["trees", "searching"], "reason": "A tree that follows the binary search idea."},
+ "heaps": {"name": "Heaps", "prerequisites": ["trees", "arrays"], "reason": "A complete binary tree stored in an array."},
+ "graph_rep": {"name": "Graph Representation", "prerequisites": ["arrays", "linked_list"], "reason": "Adjacency list/matrix use arrays and lists."},
+ "bfs_dfs": {"name": "BFS / DFS", "prerequisites": ["stacks", "queues", "graph_rep", "recursion"], "reason": "BFS uses a queue, DFS uses a stack or recursion."},
+ "shortest_paths": {"name": "Shortest Paths", "prerequisites": ["heaps", "bfs_dfs"], "reason": "Dijkstra uses a heap on top of graph traversal."}
+}

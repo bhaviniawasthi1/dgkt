@@ -1,0 +1,1874 @@
+[
+ {
+  "id": "q005",
+  "concept_id": "arrays",
+  "text": "What is the time complexity of inserting an element at the beginning of an array of size n?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q006",
+  "concept_id": "arrays",
+  "text": "Which of the following is true about arrays?",
+  "options": [
+   "Elements are stored at non-contiguous memory locations",
+   "Elements are stored at contiguous memory locations",
+   "Arrays cannot store duplicate values",
+   "Arrays have variable element size within the same array"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q007",
+  "concept_id": "arrays",
+  "text": "What is the time complexity to find the maximum element in an unsorted array of n elements?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q008",
+  "concept_id": "arrays",
+  "text": "Given arr = [4, 2, 7, 1], what is arr[2]?",
+  "options": [
+   "4",
+   "2",
+   "7",
+   "1"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q013",
+  "concept_id": "recursion",
+  "text": "What are the two essential parts of any correct recursive function?",
+  "options": [
+   "A loop and a variable",
+   "A base case and a recursive case",
+   "An array and an index",
+   "A stack and a queue"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q014",
+  "concept_id": "recursion",
+  "text": "What happens if a recursive function has no base case (or an unreachable one)?",
+  "options": [
+   "It runs faster",
+   "It causes a stack overflow (infinite recursion)",
+   "It automatically converts to iteration",
+   "Nothing, it works fine"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q015",
+  "concept_id": "recursion",
+  "text": "What is the time complexity of computing factorial(n) using simple recursion?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q016",
+  "concept_id": "recursion",
+  "text": "Recursion uses which data structure internally to keep track of function calls?",
+  "options": [
+   "Queue",
+   "Call stack",
+   "Hash map",
+   "Heap (priority queue)"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q017",
+  "concept_id": "linked_list",
+  "text": "What is the main advantage of a linked list over an array for insertion?",
+  "options": [
+   "Random access in O(1)",
+   "Insertion at a known position can be O(1), no shifting needed",
+   "Uses less memory always",
+   "Better cache performance than arrays"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q018",
+  "concept_id": "linked_list",
+  "text": "What is the time complexity to access the k-th element in a singly linked list?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q019",
+  "concept_id": "linked_list",
+  "text": "What does each node in a singly linked list typically store?",
+  "options": [
+   "Only data",
+   "Data and a pointer/reference to the next node",
+   "Data and pointers to both next and previous nodes",
+   "Only a pointer, no data"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q020",
+  "concept_id": "linked_list",
+  "text": "Which technique (using two pointers moving at different speeds) is used to detect a cycle in a linked list?",
+  "options": [
+   "Binary search",
+   "Floyd's cycle detection (slow/fast pointer)",
+   "Merge sort",
+   "Dijkstra's algorithm"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q021",
+  "concept_id": "stacks",
+  "text": "A stack follows which order principle?",
+  "options": [
+   "FIFO (First In First Out)",
+   "LIFO (Last In First Out)",
+   "Random order",
+   "Priority order"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q022",
+  "concept_id": "stacks",
+  "text": "Which real-world scenario best matches stack behavior?",
+  "options": [
+   "A queue at a ticket counter",
+   "A stack of plates - you take the top one first",
+   "A round-robin CPU scheduler",
+   "A phone book sorted alphabetically"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q023",
+  "concept_id": "stacks",
+  "text": "What is the time complexity of push and pop operations in a properly implemented stack?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q024",
+  "concept_id": "stacks",
+  "text": "Which classic problem is typically solved using a stack?",
+  "options": [
+   "Finding shortest path in a graph",
+   "Balanced parentheses / bracket matching",
+   "Sorting an array",
+   "Finding the median of a stream"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q025",
+  "concept_id": "queues",
+  "text": "A queue follows which order principle?",
+  "options": [
+   "LIFO (Last In First Out)",
+   "FIFO (First In First Out)",
+   "Random order",
+   "Always sorted order"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q026",
+  "concept_id": "queues",
+  "text": "What is the time complexity of enqueue and dequeue in a properly implemented queue?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q027",
+  "concept_id": "queues",
+  "text": "Which traversal algorithm on graphs/trees primarily uses a queue?",
+  "options": [
+   "Depth-First Search (DFS)",
+   "Breadth-First Search (BFS)",
+   "Binary Search",
+   "Quick Sort"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q028",
+  "concept_id": "queues",
+  "text": "What is a circular queue used to solve?",
+  "options": [
+   "Sorting problems",
+   "Wasted space at the front of a normal array-based queue after dequeues",
+   "Recursion depth issues",
+   "Hash collisions"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q029",
+  "concept_id": "hashing",
+  "text": "What is the average time complexity of lookup in a hash map?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q030",
+  "concept_id": "hashing",
+  "text": "What is a 'collision' in hashing?",
+  "options": [
+   "When the hash table is empty",
+   "When two different keys map to the same index/bucket",
+   "When a key is deleted",
+   "When the hash function returns a negative number"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q031",
+  "concept_id": "hashing",
+  "text": "Which of these is a common technique to resolve hash collisions?",
+  "options": [
+   "Chaining (linked lists at each bucket)",
+   "Ignoring the collision",
+   "Always resizing to infinity",
+   "Using recursion only"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q032",
+  "concept_id": "hashing",
+  "text": "In the worst case (many collisions), hash map lookup can degrade to what?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "It can never degrade"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q033",
+  "concept_id": "sorting",
+  "text": "What is the average time complexity of Merge Sort?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q034",
+  "concept_id": "sorting",
+  "text": "What is the worst-case time complexity of Bubble Sort?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q035",
+  "concept_id": "sorting",
+  "text": "Which sorting algorithm is generally an 'in-place, divide and conquer' algorithm with average-case O(n log n) but worst-case O(n^2)?",
+  "options": [
+   "Merge Sort",
+   "Quick Sort",
+   "Bubble Sort",
+   "Counting Sort"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q036",
+  "concept_id": "sorting",
+  "text": "What does it mean for a sorting algorithm to be 'stable'?",
+  "options": [
+   "It never fails",
+   "Equal elements retain their original relative order after sorting",
+   "It always runs in O(n)",
+   "It uses no extra memory"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q037",
+  "concept_id": "searching",
+  "text": "What is the precondition for Binary Search to work correctly?",
+  "options": [
+   "The array must be sorted",
+   "The array must have unique elements only",
+   "The array must be an integer array",
+   "There is no precondition"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q038",
+  "concept_id": "searching",
+  "text": "What is the time complexity of Binary Search on a sorted array of n elements?",
+  "options": [
+   "O(n)",
+   "O(log n)",
+   "O(n log n)",
+   "O(1)"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q039",
+  "concept_id": "searching",
+  "text": "What is the time complexity of Linear Search in the worst case?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q040",
+  "concept_id": "searching",
+  "text": "Binary Search repeatedly divides the search space by what factor?",
+  "options": [
+   "2",
+   "10",
+   "n",
+   "It doesn't divide, it scans linearly"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q041",
+  "concept_id": "backtracking",
+  "text": "Backtracking is best described as which approach?",
+  "options": [
+   "Trying all possibilities and abandoning ('backtracking from') a path as soon as it's known to fail",
+   "Always picking the locally best choice",
+   "Precomputing all answers in a table",
+   "Sorting the input first, always"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q042",
+  "concept_id": "backtracking",
+  "text": "Which classic problem is a typical backtracking example?",
+  "options": [
+   "Merge Sort",
+   "N-Queens problem",
+   "Binary Search",
+   "Hash map lookup"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q043",
+  "concept_id": "backtracking",
+  "text": "What underlying technique does backtracking build on top of?",
+  "options": [
+   "Dynamic programming tables",
+   "Recursion (exploring choices, then undoing/backtracking)",
+   "Hashing",
+   "Greedy selection only"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q044",
+  "concept_id": "backtracking",
+  "text": "Backtracking algorithms typically have what kind of worst-case time complexity?",
+  "options": [
+   "Always O(n)",
+   "Always O(log n)",
+   "Often exponential, since many possibilities may be explored",
+   "Always O(1)"
+  ],
+  "correct_index": 2,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q045",
+  "concept_id": "dp",
+  "text": "Dynamic Programming is most useful for problems that have which two properties?",
+  "options": [
+   "Randomness and independence",
+   "Overlapping subproblems and optimal substructure",
+   "Sorted input and constant space",
+   "No recursion and no recursion base case"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q046",
+  "concept_id": "dp",
+  "text": "What is 'memoization' in the context of Dynamic Programming?",
+  "options": [
+   "Deleting old results to save memory",
+   "Caching/storing results of subproblems to avoid recomputing them",
+   "Sorting subproblems before solving",
+   "Running the algorithm in reverse only"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q047",
+  "concept_id": "dp",
+  "text": "Which classic problem is commonly solved with Dynamic Programming?",
+  "options": [
+   "Fibonacci sequence (efficient version)",
+   "Simple array traversal",
+   "Printing an array",
+   "Swapping two variables"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q048",
+  "concept_id": "dp",
+  "text": "What does Dynamic Programming primarily improve compared to plain (naive) recursion on the same problem?",
+  "options": [
+   "It makes code shorter, nothing else",
+   "It avoids recomputing overlapping subproblems, improving time complexity",
+   "It removes the need for a base case",
+   "It always removes the need for recursion entirely"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q049",
+  "concept_id": "trees",
+  "text": "What is a key property of a tree data structure?",
+  "options": [
+   "It can contain cycles",
+   "It is a hierarchical structure with one root and no cycles",
+   "Every node has exactly two children",
+   "It stores data in sorted order always"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q050",
+  "concept_id": "trees",
+  "text": "What is a 'leaf node' in a tree?",
+  "options": [
+   "The topmost node",
+   "A node with no children",
+   "A node with exactly one child",
+   "The root node"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q051",
+  "concept_id": "trees",
+  "text": "Which traversal visits: Left subtree, Root, Right subtree?",
+  "options": [
+   "Preorder",
+   "Inorder",
+   "Postorder",
+   "Level-order"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q052",
+  "concept_id": "trees",
+  "text": "Tree traversal algorithms are most naturally implemented using which technique?",
+  "options": [
+   "Hashing",
+   "Recursion (or an explicit stack/queue)",
+   "Binary Search only",
+   "Sorting"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q053",
+  "concept_id": "bst",
+  "text": "In a Binary Search Tree (BST), for any node, where are values smaller than it stored?",
+  "options": [
+   "In the right subtree",
+   "In the left subtree",
+   "At the root only",
+   "Anywhere randomly"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q054",
+  "concept_id": "bst",
+  "text": "What is the average time complexity of search in a balanced BST?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q055",
+  "concept_id": "bst",
+  "text": "What happens to BST search time complexity if the tree becomes skewed (like a linked list)?",
+  "options": [
+   "Stays O(log n)",
+   "Improves to O(1)",
+   "Degrades to O(n)",
+   "Becomes undefined"
+  ],
+  "correct_index": 2,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q056",
+  "concept_id": "bst",
+  "text": "An inorder traversal of a BST produces elements in what order?",
+  "options": [
+   "Random order",
+   "Descending order always",
+   "Sorted (ascending) order",
+   "Reverse insertion order"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q057",
+  "concept_id": "heaps",
+  "text": "What is the defining property of a Min-Heap?",
+  "options": [
+   "Every parent node is greater than its children",
+   "Every parent node is smaller than (or equal to) its children",
+   "It is always a sorted array",
+   "It has no root node"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q058",
+  "concept_id": "heaps",
+  "text": "What is the time complexity to extract the minimum element from a Min-Heap?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q059",
+  "concept_id": "heaps",
+  "text": "Heaps are commonly implemented using which underlying data structure?",
+  "options": [
+   "Linked list",
+   "Array",
+   "Hash map",
+   "Graph adjacency list"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q060",
+  "concept_id": "heaps",
+  "text": "A heap is typically used to efficiently implement which abstract data type?",
+  "options": [
+   "Stack",
+   "Priority Queue",
+   "Simple Queue (FIFO)",
+   "Hash Set"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q061",
+  "concept_id": "graph_rep",
+  "text": "A graph consists of which two core components?",
+  "options": [
+   "Rows and columns",
+   "Vertices (nodes) and edges",
+   "Keys and values",
+   "Roots and leaves"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q062",
+  "concept_id": "graph_rep",
+  "text": "What is the difference between a directed and undirected graph?",
+  "options": [
+   "Directed graphs have no edges",
+   "Directed edges have a direction (one-way); undirected edges go both ways",
+   "Undirected graphs cannot have cycles",
+   "There is no difference"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q063",
+  "concept_id": "graph_rep",
+  "text": "Which representation stores, for each vertex, a list of its neighboring vertices?",
+  "options": [
+   "Adjacency matrix",
+   "Adjacency list",
+   "Incidence table",
+   "Distance matrix"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q064",
+  "concept_id": "graph_rep",
+  "text": "A tree can be considered a special kind of graph. What makes it special?",
+  "options": [
+   "It has cycles",
+   "It is connected and acyclic (no cycles)",
+   "It has no root",
+   "It must be directed"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q065",
+  "concept_id": "bfs_dfs",
+  "text": "BFS (Breadth-First Search) explores a graph in which manner?",
+  "options": [
+   "Goes as deep as possible first, then backtracks",
+   "Explores all neighbors at the current depth before going deeper",
+   "Explores randomly",
+   "Only works on trees, not graphs"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q066",
+  "concept_id": "bfs_dfs",
+  "text": "DFS (Depth-First Search) is typically implemented using which two approaches?",
+  "options": [
+   "Only iteratively with a queue",
+   "Recursion, or an explicit stack",
+   "Only with a hash map",
+   "Only with sorting"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q067",
+  "concept_id": "bfs_dfs",
+  "text": "Which data structure does BFS use to keep track of the next nodes to visit?",
+  "options": [
+   "Stack",
+   "Queue",
+   "Hash map only",
+   "Priority queue always"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q068",
+  "concept_id": "bfs_dfs",
+  "text": "What is a common real-world use case for BFS?",
+  "options": [
+   "Finding the shortest path in an unweighted graph",
+   "Sorting an array",
+   "Compressing a string",
+   "Balancing parentheses"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q069",
+  "concept_id": "greedy",
+  "text": "A Greedy algorithm makes decisions based on what principle?",
+  "options": [
+   "Trying every possible combination",
+   "Picking the locally optimal choice at each step, hoping it leads to a global optimum",
+   "Always picking randomly",
+   "Solving subproblems bottom-up with a table"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q070",
+  "concept_id": "greedy",
+  "text": "Which classic problem is commonly solved with a Greedy approach?",
+  "options": [
+   "Activity/Interval Selection problem",
+   "Computing Fibonacci numbers",
+   "Binary Search",
+   "Depth-First Search"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q071",
+  "concept_id": "greedy",
+  "text": "Why doesn't a Greedy approach work correctly for every optimization problem?",
+  "options": [
+   "Greedy always gives the correct answer for every problem",
+   "A locally optimal choice doesn't always lead to a globally optimal solution",
+   "Greedy is always slower than brute force",
+   "Greedy cannot be implemented in code"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q072",
+  "concept_id": "greedy",
+  "text": "Greedy algorithms are often compared with which other technique, since both build a solution incrementally?",
+  "options": [
+   "Hashing",
+   "Dynamic Programming",
+   "Binary Search",
+   "String matching"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q073",
+  "concept_id": "shortest_paths",
+  "text": "Which algorithm finds the shortest path in a graph with non-negative edge weights?",
+  "options": [
+   "Dijkstra's Algorithm",
+   "Bubble Sort",
+   "Binary Search",
+   "Depth-First Search only"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q074",
+  "concept_id": "shortest_paths",
+  "text": "For an unweighted graph, which simpler algorithm gives the shortest path (in terms of number of edges)?",
+  "options": [
+   "Dijkstra's Algorithm",
+   "BFS (Breadth-First Search)",
+   "Merge Sort",
+   "Backtracking"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q075",
+  "concept_id": "shortest_paths",
+  "text": "Dijkstra's Algorithm typically uses which data structure to efficiently pick the next closest node?",
+  "options": [
+   "Stack",
+   "Min-Heap (Priority Queue)",
+   "Simple array with no structure",
+   "Hash set only"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q076",
+  "concept_id": "shortest_paths",
+  "text": "Which algorithm can handle graphs with negative edge weights (unlike Dijkstra)?",
+  "options": [
+   "Bellman-Ford Algorithm",
+   "Binary Search",
+   "Bubble Sort",
+   "BFS"
+  ],
+  "correct_index": 0,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q077",
+  "concept_id": "arrays",
+  "text": "What is the time complexity of accessing arr[i] by index?",
+  "options": [
+   "O(1)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q078",
+  "concept_id": "arrays",
+  "text": "Inserting a new element at the beginning of an array of n elements needs about how many shifts?",
+  "options": [
+   "n",
+   "log n",
+   "1",
+   "0"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q079",
+  "concept_id": "recursion",
+  "text": "What must every correct recursive function have so that it stops?",
+  "options": [
+   "A global variable",
+   "A loop",
+   "An array",
+   "A base case"
+  ],
+  "correct_index": 3,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q080",
+  "concept_id": "recursion",
+  "text": "What does f(4) return? int f(int n){ if(n<=1) return 1; return n*f(n-1); }",
+  "options": [
+   "12",
+   "10",
+   "16",
+   "24"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q081",
+  "concept_id": "hashing",
+  "text": "Two different keys going to the same bucket is called:",
+  "options": [
+   "Overflow",
+   "Collision",
+   "Rehash",
+   "Cycle"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q082",
+  "concept_id": "hashing",
+  "text": "Average time of get() in a good hash table is:",
+  "options": [
+   "O(n log n)",
+   "O(log n)",
+   "O(1)",
+   "O(n)"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q083",
+  "concept_id": "sorting",
+  "text": "Which sorting algorithm uses the divide and conquer idea with a merge step?",
+  "options": [
+   "Selection sort",
+   "Merge sort",
+   "Bubble sort",
+   "Insertion sort"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q084",
+  "concept_id": "sorting",
+  "text": "Worst-case time complexity of quick sort is:",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q085",
+  "concept_id": "searching",
+  "text": "Binary search can be used only when the data is:",
+  "options": [
+   "Sorted",
+   "Stored in a linked list",
+   "Positive",
+   "Unique"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q086",
+  "concept_id": "searching",
+  "text": "How many comparisons does binary search need at most for 1024 sorted elements?",
+  "options": [
+   "1024",
+   "About 512",
+   "About 10",
+   "About 100"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q087",
+  "concept_id": "linked_list",
+  "text": "In a singly linked list, which operation is O(1) if you already have the node before the position?",
+  "options": [
+   "Searching a value",
+   "Accessing the k-th node",
+   "Finding the length",
+   "Inserting after that node"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q088",
+  "concept_id": "linked_list",
+  "text": "Why can't we use binary search directly on a linked list?",
+  "options": [
+   "Nodes are unsorted by nature",
+   "It uses too much memory",
+   "No random access by index",
+   "It has no head"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q089",
+  "concept_id": "stacks",
+  "text": "Which principle does a stack follow?",
+  "options": [
+   "FIFO",
+   "Priority first",
+   "LIFO",
+   "Random access"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q090",
+  "concept_id": "stacks",
+  "text": "Which data structure is normally used to check balanced brackets in an expression?",
+  "options": [
+   "Hash map",
+   "Stack",
+   "Heap",
+   "Queue"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q091",
+  "concept_id": "queues",
+  "text": "Which principle does a queue follow?",
+  "options": [
+   "Sorted order",
+   "FIFO",
+   "LIFO",
+   "Random order"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q092",
+  "concept_id": "queues",
+  "text": "Which operation removes an element from the front of a queue?",
+  "options": [
+   "Peek only",
+   "Dequeue",
+   "Enqueue",
+   "Push"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q093",
+  "concept_id": "memoization",
+  "text": "What does memoization do?",
+  "options": [
+   "Sorts the input",
+   "Stores results of function calls to avoid repeating them",
+   "Removes the base case",
+   "Makes a function iterative"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q094",
+  "concept_id": "memoization",
+  "text": "Naive recursive Fibonacci takes exponential time. With memoization it becomes:",
+  "options": [
+   "Still exponential",
+   "O(n)",
+   "O(log n)",
+   "O(n^2)"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q095",
+  "concept_id": "memoization",
+  "text": "Which structure is commonly used to store memoized results?",
+  "options": [
+   "Linked list only",
+   "Stack only",
+   "Hash map or array",
+   "Queue only"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q096",
+  "concept_id": "memoization",
+  "text": "Memoization is applied to a recursive function when:",
+  "options": [
+   "The same sub-problems are solved again and again",
+   "The recursion depth is 1",
+   "The function has no arguments",
+   "The input is already sorted"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q097",
+  "concept_id": "memoization",
+  "text": "Which approach is memoization: top-down or bottom-up?",
+  "options": [
+   "Neither",
+   "Bottom-up",
+   "Top-down",
+   "Both always"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q098",
+  "concept_id": "memoization",
+  "text": "For f(n) with a memo table of size n+1 and each state computed once in O(1), total time is:",
+  "options": [
+   "O(2^n)",
+   "O(n)",
+   "O(n^2)",
+   "O(1)"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q099",
+  "concept_id": "dp",
+  "text": "Dynamic programming is useful when a problem has:",
+  "options": [
+   "No recursion possible",
+   "Sorted input",
+   "Only one sub-problem",
+   "Overlapping sub-problems and optimal substructure"
+  ],
+  "correct_index": 3,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q100",
+  "concept_id": "dp",
+  "text": "The bottom-up DP approach fills a table starting from:",
+  "options": [
+   "The largest sub-problem",
+   "The smallest sub-problems",
+   "The final answer",
+   "A random cell"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q101",
+  "concept_id": "backtracking",
+  "text": "Backtracking means:",
+  "options": [
+   "Try a choice, and undo it if it leads to no solution",
+   "Sort and then search",
+   "Always take the best choice",
+   "Run the loop in reverse"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q102",
+  "concept_id": "backtracking",
+  "text": "Which problem is a classic backtracking problem?",
+  "options": [
+   "Counting sort",
+   "Reversing an array",
+   "Binary search",
+   "N-Queens"
+  ],
+  "correct_index": 3,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q103",
+  "concept_id": "greedy",
+  "text": "A greedy algorithm:",
+  "options": [
+   "Always uses recursion",
+   "Picks the best looking choice at each step",
+   "Stores all sub-results",
+   "Tries all possibilities"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q104",
+  "concept_id": "greedy",
+  "text": "Activity selection is solved greedily by sorting activities by:",
+  "options": [
+   "Name",
+   "Start time",
+   "Duration only, longest first",
+   "Finish time"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q105",
+  "concept_id": "trees",
+  "text": "In a binary tree, each node has at most how many children?",
+  "options": [
+   "2",
+   "1",
+   "n",
+   "3"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q106",
+  "concept_id": "trees",
+  "text": "Which traversal visits left subtree, node, then right subtree?",
+  "options": [
+   "Level order",
+   "Inorder",
+   "Preorder",
+   "Postorder"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q107",
+  "concept_id": "bst",
+  "text": "Inorder traversal of a binary search tree gives the keys in:",
+  "options": [
+   "Level order",
+   "Sorted order",
+   "Reverse order",
+   "Random order"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q108",
+  "concept_id": "bst",
+  "text": "In a BST, all keys in the left subtree of a node are:",
+  "options": [
+   "Larger than the node key",
+   "Equal to the node key",
+   "Smaller than the node key",
+   "Unrelated to the node key"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q109",
+  "concept_id": "heaps",
+  "text": "In a min-heap, the smallest element is at:",
+  "options": [
+   "The root",
+   "A leaf",
+   "The middle",
+   "The last index"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q110",
+  "concept_id": "heaps",
+  "text": "Time to insert one element into a binary heap of n elements:",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n log n)",
+   "O(1)"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q111",
+  "concept_id": "graph_rep",
+  "text": "An adjacency matrix for a graph with V vertices uses how much space?",
+  "options": [
+   "O(log V)",
+   "O(E)",
+   "O(V)",
+   "O(V^2)"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q112",
+  "concept_id": "graph_rep",
+  "text": "For a sparse graph, which representation is usually better?",
+  "options": [
+   "Adjacency matrix",
+   "Neither can be used",
+   "Adjacency list",
+   "Both use the same"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q113",
+  "concept_id": "bfs_dfs",
+  "text": "Which data structure does BFS use?",
+  "options": [
+   "Queue",
+   "Hash set only",
+   "Heap",
+   "Stack"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q114",
+  "concept_id": "bfs_dfs",
+  "text": "BFS finds the shortest path in terms of number of edges in:",
+  "options": [
+   "A graph with negative edges",
+   "Only trees with weights",
+   "An unweighted graph",
+   "No graph"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q115",
+  "concept_id": "shortest_paths",
+  "text": "Dijkstra's algorithm does NOT work correctly when the graph has:",
+  "options": [
+   "Directed edges",
+   "Cycles",
+   "Many vertices",
+   "Negative edge weights"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q116",
+  "concept_id": "shortest_paths",
+  "text": "Which data structure makes Dijkstra efficient?",
+  "options": [
+   "Plain array scan only",
+   "Stack",
+   "Linked list",
+   "Priority queue (min-heap)"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q117",
+  "concept_id": "arrays",
+  "text": "Which statement about arrays is true?",
+  "options": [
+   "Elements are stored in contiguous memory",
+   "Size can grow without copying",
+   "Elements can be of different types in Java",
+   "Access by index is O(n)"
+  ],
+  "correct_index": 0,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q118",
+  "concept_id": "arrays",
+  "text": "What is the output? int[] a={2,4,6,8}; System.out.println(a[a.length-1]);",
+  "options": [
+   "6",
+   "ArrayIndexOutOfBoundsException",
+   "8",
+   "4"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q119",
+  "concept_id": "recursion",
+  "text": "What happens if a recursive function has no base case?",
+  "options": [
+   "It becomes iterative",
+   "It runs once",
+   "It returns 0",
+   "StackOverflowError"
+  ],
+  "correct_index": 3,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q120",
+  "concept_id": "recursion",
+  "text": "How many calls does f(3) make in total (including f(3))? int f(int n){ if(n==0) return 0; return f(n-1)+1; }",
+  "options": [
+   "2",
+   "6",
+   "3",
+   "4"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q121",
+  "concept_id": "hashing",
+  "text": "Which technique resolves collisions by storing multiple entries in the same bucket using a list?",
+  "options": [
+   "Sorting",
+   "Rotation",
+   "Chaining",
+   "Padding"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q122",
+  "concept_id": "hashing",
+  "text": "A good hash function should:",
+  "options": [
+   "Map all keys to the same index",
+   "Change on every call",
+   "Spread keys evenly across buckets",
+   "Always return a negative number"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q123",
+  "concept_id": "sorting",
+  "text": "Which sorting algorithm is stable and has O(n log n) worst case?",
+  "options": [
+   "Selection sort",
+   "Heap sort",
+   "Merge sort",
+   "Quick sort"
+  ],
+  "correct_index": 2,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q124",
+  "concept_id": "sorting",
+  "text": "Insertion sort is fastest (about O(n)) when the input is:",
+  "options": [
+   "All different",
+   "Already sorted",
+   "Random",
+   "Reverse sorted"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q125",
+  "concept_id": "searching",
+  "text": "What is the time complexity of linear search in the worst case?",
+  "options": [
+   "O(1)",
+   "O(n)",
+   "O(log n)",
+   "O(n log n)"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q126",
+  "concept_id": "searching",
+  "text": "In binary search on indices low=0, high=9, what is mid (using (low+high)/2)?",
+  "options": [
+   "5",
+   "0",
+   "4",
+   "9"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q127",
+  "concept_id": "linked_list",
+  "text": "What does the last node of a singly linked list point to?",
+  "options": [
+   "The previous node",
+   "The head",
+   "null",
+   "Itself always"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q128",
+  "concept_id": "linked_list",
+  "text": "Which operation is O(n) in a singly linked list with only a head pointer?",
+  "options": [
+   "Inserting at the end",
+   "Deleting the head",
+   "Checking if the list is empty",
+   "Inserting at the head"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q129",
+  "concept_id": "stacks",
+  "text": "After push(1), push(2), push(3), pop(), what does peek() return?",
+  "options": [
+   "3",
+   "Nothing",
+   "2",
+   "1"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q130",
+  "concept_id": "stacks",
+  "text": "Stack overflow in a fixed-size array stack happens when:",
+  "options": [
+   "The stack is empty",
+   "peek is called twice",
+   "pop is called on a full stack",
+   "push is called on a full stack"
+  ],
+  "correct_index": 3,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q131",
+  "concept_id": "queues",
+  "text": "After enqueue(1), enqueue(2), enqueue(3), dequeue(), what is at the front?",
+  "options": [
+   "3",
+   "2",
+   "1",
+   "Nothing"
+  ],
+  "correct_index": 1,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q132",
+  "concept_id": "queues",
+  "text": "A circular queue is used mainly to:",
+  "options": [
+   "Search faster",
+   "Sort elements",
+   "Store keys by hash",
+   "Reuse empty space at the front of the array"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q133",
+  "concept_id": "memoization",
+  "text": "Which is the main cost of memoization?",
+  "options": [
+   "Slower base case",
+   "Loss of recursion",
+   "Wrong answers",
+   "Extra memory to store results"
+  ],
+  "correct_index": 3,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q134",
+  "concept_id": "memoization",
+  "text": "Memoization is NOT useful for a recursive function when:",
+  "options": [
+   "Sub-problems repeat often",
+   "The results are numbers",
+   "The function is pure",
+   "Sub-problems never repeat"
+  ],
+  "correct_index": 3,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q135",
+  "concept_id": "dp",
+  "text": "The 0/1 knapsack problem is usually solved with:",
+  "options": [
+   "Hashing",
+   "Dynamic programming",
+   "BFS",
+   "Binary search"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q136",
+  "concept_id": "dp",
+  "text": "In DP, the recurrence relation tells us:",
+  "options": [
+   "How to sort the input",
+   "Which hash function to use",
+   "How many test cases exist",
+   "How a state's answer comes from smaller states"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q137",
+  "concept_id": "backtracking",
+  "text": "In backtracking, pruning means:",
+  "options": [
+   "Storing results in a table",
+   "Adding more choices",
+   "Sorting the choices",
+   "Stopping a path that cannot give a valid solution"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q138",
+  "concept_id": "backtracking",
+  "text": "How many permutations does the string \"abc\" have, which a backtracking solution generates?",
+  "options": [
+   "9",
+   "6",
+   "8",
+   "3"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q139",
+  "concept_id": "greedy",
+  "text": "Which problem is solved correctly by a greedy approach?",
+  "options": [
+   "0/1 knapsack",
+   "Longest common subsequence",
+   "Fractional knapsack",
+   "Edit distance"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q140",
+  "concept_id": "greedy",
+  "text": "A greedy choice is safe only when:",
+  "options": [
+   "It uses recursion",
+   "It is the first choice seen",
+   "Choosing it never blocks an optimal solution",
+   "It is the largest number"
+  ],
+  "correct_index": 2,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q141",
+  "concept_id": "trees",
+  "text": "The height of a tree with only a root node (counting edges) is:",
+  "options": [
+   "2",
+   "Undefined",
+   "1",
+   "0"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q142",
+  "concept_id": "trees",
+  "text": "Which traversal of a binary tree uses a queue?",
+  "options": [
+   "Inorder",
+   "Level order",
+   "Postorder",
+   "Preorder"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q143",
+  "concept_id": "bst",
+  "text": "Searching in a balanced BST with n nodes takes:",
+  "options": [
+   "O(n^2)",
+   "O(n)",
+   "O(1)",
+   "O(log n)"
+  ],
+  "correct_index": 3,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q144",
+  "concept_id": "bst",
+  "text": "If you insert 1, 2, 3, 4 in this order into an empty BST, the tree becomes:",
+  "options": [
+   "A single node",
+   "A chain leaning to the left",
+   "A chain leaning to the right",
+   "A perfectly balanced tree"
+  ],
+  "correct_index": 2,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q145",
+  "concept_id": "heaps",
+  "text": "Where is the parent of index i (i>0) in an array-based binary heap (0-indexed)?",
+  "options": [
+   "2*i",
+   "(i-1)/2",
+   "i/3",
+   "i+1"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q146",
+  "concept_id": "heaps",
+  "text": "Which data structure is used to build a priority queue?",
+  "options": [
+   "Array of strings",
+   "Stack",
+   "Heap",
+   "Queue"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q147",
+  "concept_id": "graph_rep",
+  "text": "In an adjacency list, how do you find all neighbours of vertex v?",
+  "options": [
+   "Run BFS",
+   "Scan the full matrix only",
+   "Read the list stored at v",
+   "Sort all edges"
+  ],
+  "correct_index": 2,
+  "difficulty": "easy"
+ },
+ {
+  "id": "q148",
+  "concept_id": "graph_rep",
+  "text": "For an undirected graph, an edge between u and v is stored:",
+  "options": [
+   "Nowhere",
+   "In both u's and v's lists",
+   "Only in v's list",
+   "Only in u's list"
+  ],
+  "correct_index": 1,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q149",
+  "concept_id": "bfs_dfs",
+  "text": "Which traversal can be written recursively very naturally?",
+  "options": [
+   "DFS",
+   "BFS",
+   "Both need a queue",
+   "Neither"
+  ],
+  "correct_index": 0,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q150",
+  "concept_id": "bfs_dfs",
+  "text": "The time complexity of BFS using adjacency lists is:",
+  "options": [
+   "O(E^2)",
+   "O(log V)",
+   "O(V * E)",
+   "O(V + E)"
+  ],
+  "correct_index": 3,
+  "difficulty": "hard"
+ },
+ {
+  "id": "q151",
+  "concept_id": "shortest_paths",
+  "text": "Dijkstra's algorithm always picks next the unvisited vertex with:",
+  "options": [
+   "The largest weight",
+   "The smallest index",
+   "The smallest known distance",
+   "The most edges"
+  ],
+  "correct_index": 2,
+  "difficulty": "medium"
+ },
+ {
+  "id": "q152",
+  "concept_id": "shortest_paths",
+  "text": "Which algorithm can handle negative edge weights (without negative cycles)?",
+  "options": [
+   "DFS",
+   "Bellman-Ford",
+   "Dijkstra",
+   "BFS"
+  ],
+  "correct_index": 1,
+  "difficulty": "hard"
+ }
+]

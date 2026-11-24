@@ -10,7 +10,7 @@ target/
 .settings/
 
 # Runtime data (local database and answer log)
-data/
+/data/
 
 # OS files
 .DS_Store
